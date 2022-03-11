@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML연습</title>
+    <style>
+        /* table, th, td {
+            border: 1px solid black;
+            padding: 10px;
+        } */
+        table, td, th{
+            padding: 10px 40px 10px 40px;
+            /* padding:0 0 0 0; */
+            text-align: center;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        .HomeworkTable2 td {
+            padding: 0 0 0 0;
+            width:80px;
+            
+        }
+        .HomeworkTable2 th{
+            padding: 0 0 0 0;
+            width:80px;
+        }
+
+        .HomeworkTable2 tr{
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>2022.3.10 목요일</h1>
+    <a href="https://www.naver.com" target="_blank"><img src="dog.jfif" alt="강아지"></a>
+    <h2>Unordered List</h2>
+    <ul>
+        <li>개</li>
+        <li>고양이</li>
+        <li>돼지</li>
+        <li>토끼</li>
+    </ul>
+
+    <h2>ordered List</h2>
+    <ol>
+        <li>개</li>
+        <li>고양이</li>
+        <li>돼지</li>
+        <li>토끼</li>
+    </ol>
+
+    <h2>Description List</h2>
+    <dl>
+        <dt>개</dt>
+        <dd>- dog</dd>
+        <dt>고양이</dt>
+        <dd>- cat</dd>
+    </dl>
+
+    <h1>개발,UX,UI팀 명단</h1>
+    PM - 서지혜
+    <h2>개발팀</h2>
+    <ul>
+        <li>김연준 - 팀리더</li>
+        <li>김대희 - 팀리더</li>
+        <li>김주현</li>
+        <li>추홍규</li>
+        <li>민지원</li>
+        <li>강대국</li>
+    </ul>
+    <h2>UX,UI팀</h2>
+    <ul>
+        <li>최연정 - 팀리더</li>
+        <li>최미성</li>
+        <li>이진희</li>
+    </ul><br><br>
+    
+    <!-- vscode 편의기능 : ul>li*10 + tap  -->
+    <ol>
+        <li>김연준</li>
+        <li>김대희</li>
+        <li>민지원</li>
+        <li>최연정</li>
+        <li>최미성</li>
+        <li>권봉재</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+
+    <ol>
+        <li>김연준</li>
+        <li>김대희</li>
+        <li>민지원</li>
+        <li>추홍규</li>
+        <li>김주현</li>
+        <li>강대국</li>
+    </ol>
+    <ol>
+        <li>최연정</li>
+        <li>최미성</li>
+        <li>권봉재</li>
+        <li>이진희</li>
+    </ol>
+    <!-- 
+        ul태그는 중첩가능
+        <ul>
+    <ul>
+        <ul>개발팀
+            <li>강대국</li>
+            <li>김연준</li>
+        </ul>
+        <ul>
+            <li>최연정</li>
+            <li>최미성</li>
+        </ul>
+    </ul>
+    </ul> -->
+    <table >
+        <tr>
+            <th>동물1</th>
+            <th>동물2</th>
+            <th>동물3</th>
+        </tr>
+        <tr>
+            <td>개</td>
+            <td>고양이</td>
+            <td>돼지</td>
+        </tr>
+        <tr>
+            <td>dog</td>
+            <td>cat</td>
+            <td>pig</td>
+        </tr>
+    </table>
+
+    <h3>앱개발UX,UI팀 명단</h3>
+    <h5>세로</h5>
+    <table>
+        <tr>
+            <th>PM</th>
+            <th>개발팀</th>
+            <th>UX,UI</th>
+        </tr>
+        <tr>
+            <td>서지혜</td>
+            <td>김연준</td>
+            <td>최연정</td>
+        </tr>
+        <tr>
+            <td rowspan="5"></td>
+            <td>김주현</td>
+            <td>최미성</td>
+        </tr>
+        <tr>
+     
+            <td>민지원</td>
+            <td>권봉재</td>
+        </tr>
+        <tr>
+     
+            <td>강대국</td>
+            <td>이진희</td>
+        </tr>
+        <tr>
+       
+            <td>김대희</td>
+            <td rowspan="2"></td>
+        </tr>
+        <tr>
+        
+            <td>추홍규</td>
+            
+        </tr>
+    </table>
+    <h5>가로</h5>
+    <table>
+        <tr>
+            <td>PM</td>
+            <td>서지혜</td>
+            <td colspan="5"></td>
+        
+        </tr>
+        <tr>
+            <td>개발팀</td>
+            <td>김연준</td>
+            <td>김주현</td>
+            <td>민지원</td>
+            <td>추홍규</td>
+            <td>강대국</td>
+            <td>김대희</td>
+        </tr>
+        <tr>
+            <td>UX,UI</td>
+            <td>최연정</td>
+            <td>최미성</td>
+            <td>이진희</td>
+            <td>권봉재</td>
+            <td colspan="2"></td>
+    
+        </tr>
+    </table>
+    <br>
+    <!-- colspan, rowspan w3school 예제 다해보기 만든 이름표 병합해보기 -->
+    <table>
+        <tr>
+            <th colspan="2">Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>jill</td>
+            <td>Smith</td>
+            <td>43</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>57</td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <th>Name</th>
+            <td>Jill</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Phone</td>
+            <td>555-1234</td>
+        </tr>
+        <tr>
+            <td>555-8745</td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <th colspan="2">Name</td>
+            <th>Age</td>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <th>PM</th>
+            <th>앱개발</th>
+            <th>UX,UI</th>
+        </tr>
+        <tr>
+            <td rowspan="6">서지혜</td>
+            <td>김대희</td>
+            <td rowspan="2">최연정</td>
+        </tr>
+        <tr>
+            <td>김주현</td>
+        </tr>
+        <tr>
+            <td>강대국</td>
+            <td rowspan="2">최미성</td>
+        </tr>
+        <tr>
+            <td>민지원</td>
+        </tr>
+        <tr>
+            <td>추홍규</td>
+            <td rowspan="2">이진희</td>
+        </tr>
+        <tr>
+            <td>김연준</td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <th>PM</th>
+            <th>앱개발</th>
+            <th>UX,UI</th>
+        </tr>
+        <tr>
+            <td>서지혜</td>
+            <td>김대희</td>
+            <td>최연정</td>
+        </tr>
+        <tr>
+            <td rowspan="5"></td>
+            <td>강대국</td>
+            <td>최미성</td>
+        </tr>
+        <tr>
+            <td>김주현</td>
+            <td>이진희</td>
+        </tr>
+        <tr>
+            <td>김대희</td>
+        </tr>
+        <tr>
+            <td>민지원</td>
+        </tr>
+        <tr>
+            <td>김연준</td>
+        </tr>
+    </table>
+    <br>
+    <p>
+        <h3>TABLE 크기 조정하는 법</h3>
+        1. table, td, th 태그에 padding 지정 -> 상대적인 크기조절(값이 비면 테이블이 깨짐)<br>
+        2. table size 지정, td, th 태그에 height, width 지정 -> 절대적인 크기지정(값이 비어도 테이블이 깨지지 않음)
+        <br>https://www.w3schools.com/html/html_table_sizes.asp 참고
+    </p>
+    <table class="HomeworkTable">
+        <tr>
+            <th colspan="2">NAME</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <br>
+    <table class="HomeworkTable2" >
+        <tr>
+            <th rowspan="3" >APRIL</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table> 
+    <br>
+    <table class="HomeworkTable">
+        <tr style="height:20px;">
+            <th colspan="3" style="padding:0 0 0 0;">2022</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th rowspan="2" colspan="2">FIESTA</th>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>

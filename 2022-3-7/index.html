@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- 주석은 ctrl + '/' -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>마포</title>
+    </head>
+    <!-- <body style="background-color: lightblue;"> -->
+        <body>
+        <h1 style="background-color: tomato; color:white;">2022년 3월 8일</h1>
+        <h2>h2</h2>
+        <h3><a href="PML2.html">PML2.html로 이동</a></h3>
+        <p>
+            text type input
+            <br>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <input type="button" value="submit">
+        </p>
+
+        <p style="font-size:2em; font-style:italic; color:brown; text-align:center; text-decoration:underline;">Radio type input
+            <br>
+            <!-- input type 이 checkbox, radio면 value : 실제 서버에 주는 값 -->
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">HTML</label><br>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">CSS</label><br>
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript" checked>
+            <label for="javascript">JavaScript</label>
+        </p>
+
+        <p style="font-size:50%;color:gold;background-color:black;text-align: right;">Checkbox type input
+            <br>
+            <input
+                type="checkbox"
+                id="vehicle1"
+                name="vehicle1"
+                value="Bike"
+                checked>
+            <label for="vehicle1">I have a bike</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2">I have a car</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" checked>
+            <label for="vehicle3">I have a boat</label>
+            <!-- ctrl + 'a' 전체지정
+            ctrl + shift + 'b' : beauty활용 자동 들여쓰기 -->
+        </p>
+        <p id="test">이건 id=test인 p태그</p>
+        <p class="RedText">오늘은 화요일</p>
+        <!-- id, class는 대소문자 구별한다. id는 하나의 요소에 쓰이고, class는 여러 요소에 쓰인다. -->
+        <p>내일은 쉰다</p>
+
+
+        <div>
+            이것은 Box model을 알아보기 위한 div태그
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci debitis accusantium quod nesciunt alias itaque ipsam velit, exercitationem dolor praesentium magni accusamus enim error delectus odit? Autem ipsum maxime voluptatum!
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo repellat temporibus explicabo non animi perspiciatis labore alias autem! Earum veniam itaque expedita. Tempora dignissimos est facilis praesentium suscipit eveniet repellat.
+        </div>
+        
+        <div class="second">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis officia in, accusantium, nulla alias quaerat dignissimos eos nemo molestias perspiciatis voluptates delectus deleniti, et consequuntur possimus! Ab voluptas asperiores repudiandae.
+        </div>
+    </body>
+</html>

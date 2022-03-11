@@ -1,0 +1,45 @@
+body {
+    background-color: teal;
+}
+h2 {
+    color: black;
+    text-align: right;
+}
+p {
+    font-family: verdana;
+    font-size: 25px;
+}
+#test {
+    font-size: 50px;
+}
+p.RedText {
+    color:blue;
+}
+.RedText {
+    color:red;
+    background-color: yellow;
+    display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
+}
+div {
+    background-color: lightblue;
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 30px auto;
+}
+div.second {
+    background-color: tomato;
+    width: 200px;
+    height: 30px;
+    margin: auto;
+    border: 3px solid;
+    padding: 20px;
+    font-size:2px;
+    /* display: inline; */
+}
+
+a {
+    color:hotpink;
+    h
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022/3/11 HTML 연습</title>
+    <style>
+        table {
+            font-family : arial, sans-serif;
+            border-collapse: collapse;
+            width: 50%
+        }
+        td, th {
+            border: 1px solid orange;
+            text-align: right;
+            padding: 10px;
+            /* 내부의 칸을 통통하게 만들어줌 */
+        }
+
+        tr:nth-child(odd) {
+            background-color: lemonchiffon;
+        }
+    </style>
+</head>
+<body>
+    <img src="img/apple.jpg" style="width:400px; height:300px;" alt="apple">
+
+    <h1>좋아하는과일</h1>
+
+    <ol>
+        <li>사과</li>
+        <li>바나나</li>
+        <li>토마토</li>
+    </ol>
+
+    <h2>포털사이트</h2>
+    <ul>
+        <li>네이버 : <a href="https://naver.com" target="_blank">바로가기</a></li>
+        <li>구글 : <a href="https://google.com" target="_blank">바로가기</a></li>
+        <li>다음 : <a href="https://daum.net" target="_blank">바로가기</a></li>
+    </ul>
+
+    <h2>개발,UX,UI팀</h2>
+    <table>
+        <tr>
+            <th>팀</th>
+            <th>이름</th>
+            <th>좋아하는과일</th>
+        </tr>
+        <tr>
+            <td>PM</td>
+            <td>서지혜</td>
+            <td>딸기</td>
+        </tr>
+        <tr>
+            <td rowspan="6">개발</td>
+            <td>강대국</td>
+            <td>토마토</td>
+        </tr>
+        <tr>          
+            <td>김연준</td>
+            <td>달달한 귤</td>
+        </tr>
+        <tr>
+            <td>추홍규</td>
+            <td>사과</td>
+        </tr>
+        <tr>
+            <td>민지원</td>
+            <td>복숭아</td>
+        </tr>
+        <tr>
+            <td>김주현</td>
+            <td>사과</td>
+        </tr>
+        <tr>
+            <td>김대희</td>
+            <td>바나나</td>
+        </tr>
+        <tr>
+            <td rowspan="2">UX,UI</td>
+            <td>최미성</td>
+            <td>복숭아</td>
+        </tr>
+        <tr>
+            <td>이진희</td>
+            <td>딸기</td>
+        </tr>
+    </table>
+
+    <!-- 복붙 단축키 : shift + alt + 방향키(아래/위) -->
+    <p>
+       b(bold)태그 : <b>Hello world</b>
+    </p>
+    <p>
+        Hello <b>world</b>
+    </p>
+    <p> strong태그 : Hello <strong>world</strong></p>
+    <!-- strong : 읽을때 강조 -->
+    <p> i(italic)태그 : <i>Hello world</i></p>
+    <p> em(emphasize)태그 : <em>Hello world</em></p>
+    <p> mark(marked)태그 : <mark>Hello world</mark></p>
+    <!-- mark : 형광펜 -->
+    <p> small태그 : <small>Hello world</small></p>
+    <p> del태그 : <del>Hello world</del></p>
+    <p> ins태그 : <ins>Hello world</ins></p>
+    <p> sub태그 : Hello <sub>wor</sub>ld</p>
+    <p> sup태그 : Hello <sup>worl</sup>d</p>
+
+</body>
+</html>
