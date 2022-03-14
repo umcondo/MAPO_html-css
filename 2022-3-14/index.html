@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/2e802f42d3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <title>2022/3/14</title>
+    <style>
+        div{
+            padding:20px 5px 10px 5px;
+            margin: 20px;
+        }
+        
+        body{
+            margin:0;
+        }
+
+        input::placeholder{
+            color:hide;
+            opacity: 1;
+        }
+    </style>
+    
+</head>
+<body>
+    <div style="background-color:#8a8383">
+    <!-- 월요일은 힘들다 -->
+        <i class="fa-solid fa-person" style="font-size: 70px; color:blue;"></i>
+        <i class="fa-solid fa-person-dress" style="font-size: 70px; color:red;"></i>
+        <i class="fa-solid fa-child" style="font-size:40px; color:orange;"></i>
+        <i class="fa-solid fa-restroom" style="font-size: 70px;"></i>
+    </div>
+
+    <div style="background-color:#886f6f">
+        <h1><i class="fa-solid fa-frog"></i>내가 좋아하는 동물<i class="fa-solid fa-frog"></i></h1>
+        <ul>
+            <li>개</li>
+            <li>호랑이</li>
+            <li>고래</li>
+        </ul>
+    </div>
+
+    <div style="background-color:#9b6262">
+        <h2>포털사이트</h2>
+        <ul>
+            <li><a href="https://www.google.com" target="_blank">구글</a></li>
+            <li><a href="https://www.naver.com" target="_blank">네이버</a></li>
+            <li><a href="https://www.daum.net" target="_blank">다음</a></li>
+        </ul>
+        <br>
+        <!-- ul>(li>a)*3 이용-->
+        <ul>
+            <li><a href="https://www.google.com" target="_blank">구글</a></li>
+            <li><a href="https://www.naver.com" target="_blank">네이버</a></li>
+            <li><a href="https://www.daum.net" target="_blank">다음</a></li>
+        </ul>
+
+    </div>
+
+    <div style="background-color:#852e2e">
+        <form action="/">
+            <table>
+                <tr>
+                    <td><label for="ID">ID : </label></td>
+                    <td><input type="text" id="ID" name="ID" maxlength="10" placeholder="ID를 입력하세요"></td>
+                </tr>
+                <tr>
+                    <td><label for="PASSWORD">PASSWORD : </label></td>
+                    <td><input type="password" id="PASSWORD" name="PASSWORD" maxlength="6" placeholder="PW를 입력하세요"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input onclick="alert('아이디를 입력해주세요')" style="width:100%;" type="submit" value="로그인"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div style="background-color:#881212">
+        <label for="animals">동물을 선택하세요</label>
+        <select name="animal" id="animals">
+            <option value="">선택하세요</option>
+            <option value="dog">개</option>
+            <option value="tiger">호랑이</option>
+            <option value="whale">범고래</option>
+            <option value="flog">개구리</option>
+            <option value="snake" selected>뱀</option>
+        </select>
+    </div>
+
+    <div style="background-color:#880101">
+        <h2>textarea</h2>
+        <textarea style="resize:none;" cols="50" rows="10" name="message">Hello</textarea>
+    </div>
+</body>
+</html>
