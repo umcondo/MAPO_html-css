@@ -59,28 +59,37 @@
             <table>
                 <tr>
                     <th><label for="ID">아이디</label></th>
-                    <td><input style="text-align: center;" type="text" id="ID" name="ID" placeholder="아이디를 입력하세요">
+                    <td><input type="text" id="ID" name="ID" placeholder="아이디를 입력하세요" maxlength="12">
                         <input class="b type="button" onclick="alert('아이디를 입력하세요')" value="중복확인">
                     </td>
                 </tr>
                 <tr>
                     <th><label for="PW">패스워드</label></th>
-                    <td><input type="text" id="PW" name="PW"></td>
+                    <td><input type="password" id="PW" name="PW" maxlength="12"></td>
                     
                 </tr>
                 <tr>
                     <th><label for="PW-2">패스워드확인</label></th>
-                    <td><input type="text" id="PW-2" name="PW-2"></td>
+                    <td><input type="password" id="PW-2" name="PW-2" maxlength="12"></td>
                  
                 </tr>
                 <tr>
                     <th><label for="name">이름</label></th>
-                    <td><input type="text" id="name" name="name"></td>
+                    <td><input type="text" id="name" name="name" maxlength="12"></td>
                     
                 </tr>
                 <tr>
                     <th><label for="phonenum">연락처</label></th>
-                    <td><input type="number" name="phonenum"></td>
+                    <td>
+                        <select style="border:1px solid black; width: 100px;" name="phonenum1" id="phonenum1">
+                            <option value="">-- 선택 --</option>
+                            <option value="">010</option>
+                            <option value="">011</option>
+                            <option value="">070</option>
+                        </select>
+                        - <input style="width: 100px;" type="number" name="phonenum2" maxlength="12">
+                        - <input style="width: 100px;" type="number" name="phonenum3" maxlength="12">
+                    </td>
                     
                 </tr>
                 <tr>
@@ -95,8 +104,8 @@
                 <tr>
                     <th><label for="email">이메일</label></th>
                     <td>
-                        <input type="text" id="email" name="email">
-                        <label style="padding-left:10px; padding-right:6px; "for="email2">@</label>
+                        <input type="text" id="email" name="email" maxlength="15">
+                        <label for="email2">@</label>
                         <select name="email2" id="email2">
                             <option value="">-- 선택하세요 --</option>
                             <option value="naver">naver.com</option>
@@ -147,7 +156,7 @@
                     <td>
                         <input type="checkbox" id="dream4" name="dream4" value="other">
                         <label style="padding-right:120px;" for="dream4">기타</label>
-                        <input style="padding-right:55px;" type="text" placeholder="  상세 내용을 입력하세요">
+                        <input style="padding-right:55px;" type="text" placeholder="  상세 내용을 입력하세요" maxlength="15">
                     </td>
                 </tr>
                 <tr>
