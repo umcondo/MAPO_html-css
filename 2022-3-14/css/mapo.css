@@ -18,7 +18,7 @@ input[type=button]:hover{
     border: 1px solid rgb(116, 202, 252);
 }
 #mapo-logo-container{
-    background-image: url('/img/mapo.jpg');
+    background-image: url('../img/mapo.jpg');
     width: 100%;
     height: 300px; 
     background-repeat: no-repeat;

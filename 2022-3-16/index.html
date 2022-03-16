@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2022-3-16</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        li::marker{
+            color:none;
+        }
+        /* a::before{
+            content:"<"
+        }
+        a::after{
+            content:">"
+        } */
+        /* 구글폰트 */
+        a{
+            text-decoration: none;
+            color:inherit;
+            font-family: 'Gowun Batang', serif;
+        }
+        a:hover{
+            text-decoration: none;
+            color: skyblue;
+        }
+        a:active{
+            text-decoration: none;
+        }
+        /* a:visited{
+            text-decoration: line-through;
+            color:red;
+        } */
+        * {
+            font-family: 'Gowon Batang', serif;
+        }
+        /*
+        [type=button] {
+            padding:5px 15px;
+        } */
+        .google-button{
+            padding:5px 15px;
+            border: 3px solid skyblue;
+            background-color: white;
+            color:skyblue;
+            border-radius:15%;
+            margin-left:40px;
+        }
+        input:hover{
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            transform:scale(1.5);
+            /* transition:all 10000ms; */
+            /* margin:10px; */
+        }
+        .container1{
+            display:flex;
+            align-items:center;
+            /* justify-content: space-between; */
+            border-top: 1px solid gray;
+            border-bottom: 1px solid gray;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 30%)
+        }
+        .container2{
+            display:flex;
+            gap:20px;
+            align-items: center;
+            font-weight: bold;
+        }
+        h1{
+            margin:10px 0 10px 20px;
+        }
+        li{
+            list-style:none;
+            margin:0px;
+        }
+        .container3{
+            display:flex;
+            justify-content:space-around;
+        }
+        .box{
+            width: 100px;height: 100px;background-color: black;
+            border: 1px solid red;
+            color: white;
+            /* display: inline-block; */
+        }
+        .sp{
+            width: 100px;height: 100px;background-color: pink;
+        }
+        .item1, .item2{
+            background-color: skyblue;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="container1">
+        <h1>포털사이트</h1>
+        <ul class="container2">
+            <li><a href="https://www.naver.com" target="_blank">네이버</a></li>
+            <li><a href="https://www.daum.net" target="_blank">다음</a></li>
+            <li><a href="https://www.google.com" target="_blank">구글</a></li>
+        </ul>
+    </nav>
+    <h1>구글폰트 - 고운바탕</h1>
+    <hr>
+    <input class="google-button" type="button" value="버튼">
+    <hr>
+    <div class="container3">
+        <div class="box item1">1</div>
+        <div class="box item2">2</div>
+        <div class="box item3">3</div>
+        <div class="box item4">4</div>
+    </div>
+    <hr>
+    <span class="sp item1">1</span>
+    <span class="sp item2">2</span>
+    <span class="sp item3">3</span>
+</body>
+</html>
