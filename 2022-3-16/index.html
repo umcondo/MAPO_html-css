@@ -8,16 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2e802f42d3.js" crossorigin="anonymous"></script>
     <style>
+        body{
+            margin:0;
+        }
         li::marker{
             color:none;
         }
-        /* a::before{
-            content:"<"
-        }
-        a::after{
-            content:">"
-        } */
         /* 구글폰트 */
         a{
             text-decoration: none;
@@ -31,17 +29,22 @@
         a:active{
             text-decoration: none;
         }
-        /* a:visited{
-            text-decoration: line-through;
-            color:red;
-        } */
         * {
             font-family: 'Gowon Batang', serif;
         }
-        /*
-        [type=button] {
-            padding:5px 15px;
-        } */
+
+        .background-galaxy{
+            background-color: rgb(220, 2, 3, 0.5);
+            width: 100%;
+            height: 500px;
+            background-image: url('./img/home.png');
+            background-repeat:no-repeat;
+            background-position: center;
+            background-size: cover;
+            max-width: 1200px;
+            margin:auto;
+        }
+
         .google-button{
             padding:5px 15px;
             border: 3px solid skyblue;
@@ -61,14 +64,17 @@
         .container1{
             display:flex;
             align-items:center;
-            /* justify-content: space-between; */
+            justify-content: space-between;
             border-top: 1px solid gray;
             border-bottom: 1px solid gray;
-            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 30%)
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 30%);
+            background-color: rgb(31, 29, 29);
+            color: white;
         }
         .container2{
             display:flex;
-            gap:20px;
+            gap:80px;
+            margin-right:200px;
             align-items: center;
             font-weight: bold;
         }
@@ -81,7 +87,7 @@
         }
         .container3{
             display:flex;
-            justify-content:space-around;
+            justify-content:space-between;
         }
         .box{
             width: 100px;height: 100px;background-color: black;
@@ -96,17 +102,34 @@
             background-color: skyblue;
         }
 
+        .go-up{
+            font-size: 50px;
+            background-color: #263238;
+            width: 120px;
+            border-radius:7px;
+            color: white;
+            text-align: center;
+            position: fixed;
+            bottom:20px;
+            right:20px;
+        }
+        
+
     </style>
 </head>
 <body>
-    <nav class="container1">
+    <nav id="init" class="container1">
         <h1>포털사이트</h1>
         <ul class="container2">
+            <li><a href="#init">홈</a></li>
+            <li><a href="#login-page">로그인</a></li>
+            <li><a href="#join-page">회원가입</a></li>
             <li><a href="https://www.naver.com" target="_blank">네이버</a></li>
             <li><a href="https://www.daum.net" target="_blank">다음</a></li>
             <li><a href="https://www.google.com" target="_blank">구글</a></li>
         </ul>
     </nav>
+    <div class="background-galaxy"></div>
     <h1>구글폰트 - 고운바탕</h1>
     <hr>
     <input class="google-button" type="button" value="버튼">
@@ -121,5 +144,22 @@
     <span class="sp item1">1</span>
     <span class="sp item2">2</span>
     <span class="sp item3">3</span>
+
+    <div id="join-page">
+        <img src="./img/join.PNG" width="100%" alt="join">
+        <h2>회원가입페이지</h2>
+        <h3>내용</h3>
+    </div>
+    
+    <div id="login-page">
+        <img src="./img/login.png" width="100%" alt="login">
+        <h2>로그인페이지</h2>
+        <h3>내용</h3>
+    </div>
+    <a href="#init">
+        <div class="go-up" >
+            <i class="fa-solid fa-angles-up"></i>
+        </div>
+    </a>
 </body>
 </html>
