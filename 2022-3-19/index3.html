@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body > div,
+      .row > div {
+        background-color: skyblue;
+        margin: 10px;
+        border: 8px solid rgb(10, 148, 202);
+      }
+      .h-nav {
+        overflow: hidden;
+      }
+      .nav-item {
+        float: left;
+      }
+      .nav-item:hover {
+        color: white;
+        background-color: black;
+      }
+      .foot {
+        /* width: 100%; */
+      }
+      .left {
+        float: left;
+        width: 75%;
+      }
+      .right {
+        width: 25%;
+        float: right;
+      }
+      .r:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      @media screen and (max-width: 800px) {
+        .left,
+        .right {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 400px) {
+        .nav-item {
+          clear: both;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header -->
+    <div>
+      <h1>My webpage</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+        inventore repellendus eveniet asperiores omnis eum, sequi qui magni
+        magnam sapiente minus, et quisquam facere nobis dolorem atque beatae
+        reiciendis in.
+      </p>
+    </div>
+    <!-- nav -->
+    <div class="h-nav">
+      <a class="nav-item" href="">Link</a>
+      <a class="nav-item" href="">Link</a>
+      <a class="nav-item" href="">Link</a>
+      <a class="nav-item" style="float: right" href="">Link</a>
+    </div>
+    <!-- main -->
+    <div class="r">
+      <div class="row left">
+        <div>
+          <h1></h1>
+          <h4></h4>
+          <img src="" alt="이미지" />
+          <p></p>
+          <p></p>
+        </div>
+        <div>
+          <h1></h1>
+          <h4></h4>
+          <img src="" alt="이미지" />
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+      <div class="row right">
+        <div>
+          <h1></h1>
+          <h4></h4>
+          <img src="" alt="이미지" />
+        </div>
+        <div>
+          <h1></h1>
+          <h4></h4>
+          <img src="" alt="이미지" />
+          <img src="" alt="이미지" />
+          <img src="" alt="이미지" />
+        </div>
+        <div>
+          <h1></h1>
+          <h4></h4>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <div class="foot">Footer</div>
+  </body>
+</html>

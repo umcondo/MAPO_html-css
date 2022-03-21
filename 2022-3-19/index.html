@@ -1,134 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Website</title>
     <style>
-        body > div{
-            border: 8px solid #f1f1f1;
-        }
+      body > div {
+        border: 8px solid #f1f1f1;
+      }
 
-        body{
-            background-color: #f1f1f1;
-        }
-        .header{
-            display:flex;
-            flex-direction: column;
-            text-align: center;
-            background-color: white;
-        }
-        .header h1{
-            font-size: 50px;
-        }
-        .header-nav{
-            display: flex;
-            justify-content: space-between;
-            background-color: black;
-        }
-        a{
-            color:white;
-            text-decoration: none;
-        }
-        a:hover{
-            color:black;
-            background-color: white;
-        }
-        .nav-left{
-            display: flex;
-        }
+      body {
+        background-color: #f1f1f1;
+      }
+      .header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: white;
+      }
+      .header h1 {
+        font-size: 50px;
+      }
+      .header-nav {
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      a:hover {
+        color: black;
+        background-color: white;
+      }
+      .nav-left {
+        display: flex;
+      }
 
-        .main {
-            border: 8px solid #f1f1f1;
-            background-color: white;
-            display: flex;
-            flex-direction: column;
-            padding:16px;
+      .main {
+        border: 8px solid #f1f1f1;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+      }
+      .main h1 {
+        font-size: 1.5em;
+      }
+      .footer {
+        text-align: center;
+        background-color: #ddd;
+        clear: both;
+      }
+      .c1,
+      .c2 {
+        float: left;
+        width: 75%;
+      }
+      img {
+        width: 100%;
+      }
+      @media screen and (max-width: 800px) {
+        .c1,
+        .c2 {
+          width: inherit;
         }
-        .main h1{
-            font-size: 1.5em;
+        .c3 {
+          clear: both;
         }
-        .footer{
-            text-align: center;
-            background-color: #ddd;
-            clear:both;
+      }
+      @media screen and (max-width: 400px) {
+        .header-nav {
+          flex-direction: column;
         }
-        .c1, .c2{
-            float:left;
-            width:75%;
+        .nav-left {
+          flex-direction: column;
         }
-        img{
-            width:100%;
-        }
-        @media screen and (max-width:800px) {
-            .c1, .c2{
-                width: inherit;
-            }
-            .c3 {
-                clear:both;
-            }
-        }
-        @media screen and (max-width:400px) {
-            .header-nav{
-                flex-direction: column;
-            }
-            .nav-left{
-                flex-direction: column;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="header">
-        <div style="margin:30px 0;">
-            <div><h1>My Website</h1></div>
-            <div>Resize the browser window to see the effect.</div>
+      <div style="margin: 30px 0">
+        <div><h1>My Website</h1></div>
+        <div>Resize the browser window to see the effect.</div>
+      </div>
+      <div class="header-nav">
+        <div class="nav-left">
+          <a href="/"><div style="padding: 10px 20px">Link</div></a>
+          <a href="/"><div style="padding: 10px 20px">Link</div></a>
+          <a href="/"><div style="padding: 10px 20px">Link</div></a>
         </div>
-        <div class="header-nav">
-            <div class=nav-left>
-                <a href="/"><div style="padding:10px 20px;">Link</div></a>
-                <a href="/"><div style="padding:10px 20px;">Link</div></a>
-                <a href="/"><div style="padding:10px 20px;">Link</div></a>
-            </div>
-            <a href="/"><div style="padding:10px 20px;">Link</div></a>
-        </div>
+        <a href="/"><div style="padding: 10px 20px">Link</div></a>
+      </div>
     </div>
 
-        <div class="main c1">
-            <div><h1>TITLE HEADING</h1></div>
-            <div><h5>Title description, Dec 7, 2017</h5></div>
-            <div><img src="./img/dog.jpg" alt="img"></div>
-            <div>Some text</div>
-            <div>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</div>
-        </div>
+    <div class="main c1">
+      <div><h1>TITLE HEADING</h1></div>
+      <div><h5>Title description, Dec 7, 2017</h5></div>
+      <div><img src="./img/dog.jpg" alt="img" /></div>
+      <div>Some text</div>
+      <div>
+        Sunt in culpa qui officia deserunt mollit anim id est laborum
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco.
+      </div>
+    </div>
 
-        <div class="main c2">
-            <div><h1>TITLE HEADING</h1></div>
-            <div><h5>Title description, Sep 2, 2017</h5></div>
-            <div><img src="./img/dog.jpg" alt="img"></div>
-            <div>Some text</div>
-            <div>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</div>
-        </div>
-        <div class="main c3">
-            <div><h1>About Me</h1></div>
-            <div><img src="./img/dog.jpg" alt="img"></div>
-            <div>Some text about me in culpa qui officia deserunt mollit anim..</div>
-        </div>
-        <div class="main c4">
-            <div><h1>Popular Post</h1></div>
-            <div style="display:flex; flex-direction:column;">
-                <div><img src="./img/dog.jpg" alt="image"></div>
-                <div><img src="./img/dog.jpg" alt="image"></div>
-                <div><img src="./img/dog.jpg" alt="image"></div>
-            </div>
-        </div>
-        <div class="main c5">
-            <div><h1>Follow Me</h1></div>
-            <div>Some text..</div>
-        </div>
+    <div class="main c2">
+      <div><h1>TITLE HEADING</h1></div>
+      <div><h5>Title description, Sep 2, 2017</h5></div>
+      <div><img src="./img/dog.jpg" alt="img" /></div>
+      <div>Some text</div>
+      <div>
+        Sunt in culpa qui officia deserunt mollit anim id est laborum
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco.
+      </div>
+    </div>
+    <div class="main c3">
+      <div><h1>About Me</h1></div>
+      <div><img src="./img/dog.jpg" alt="img" /></div>
+      <div>Some text about me in culpa qui officia deserunt mollit anim..</div>
+    </div>
+    <div class="main c4">
+      <div><h1>Popular Post</h1></div>
+      <div style="display: flex; flex-direction: column">
+        <div><img src="./img/dog.jpg" alt="image" /></div>
+        <div><img src="./img/dog.jpg" alt="image" /></div>
+        <div><img src="./img/dog.jpg" alt="image" /></div>
+      </div>
+    </div>
+    <div class="main c5">
+      <div><h1>Follow Me</h1></div>
+      <div>Some text..</div>
+    </div>
     <div class="footer"><h1>Footer</h1></div>
-
-    
-</body>
+  </body>
 </html>
