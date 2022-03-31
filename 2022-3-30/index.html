@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <input id="k" type="search" autofocus value="" />
+    <script>
+      console.log(document.getElementById("k").value);
+
+      // const aList = ["H", "e", "l", "l", "o", " ", "w", "o", "r", "l", "d"];
+      const aList = ["Hello world"];
+      let bList = aList[0].split("");
+
+      const a = () => {
+        if (bList.length > 0) {
+          document.getElementById("k").value += bList.shift();
+          setTimeout(() => {
+            a();
+          }, 300);
+        }
+      };
+
+      const b = () => {
+        for (let i = 0; i < 10; i++) {
+          setTimeout(() => {
+            console.log(`지금번호는 ${i} 입니다`);
+          }, i * 1000);
+        }
+      };
+      // b();
+      a();
+    </script>
+  </body>
+</html>
