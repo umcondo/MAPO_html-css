@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2022-4-4</title>
+    <style>
+      #name {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="hi">안녕하세요</h1>
+    <h2 id="name">반가워요</h2>
+    <input id="Name" type="text" onkeyup="printName()" />
+    <div id="result"></div>
+    <hr />
+    <input id="input2" type="text" />
+    <button onclick="pushText()">button</button>
+  </body>
+  <script>
+    // setTimeout - 4초 후 h1, h2태그 내용을 바꾼다
+    setTimeout(() => {
+      document.getElementById("hi").innerText = "반가워요";
+      document.getElementById("name").innerText = "강대국";
+    }, 4000);
+
+    // input 태그에 글을 쓰면 바로 밑에 같은 내용 추가
+    console.log(document.getElementById("Name").value);
+    const printName = () => {
+      let name = document.getElementById("Name").value;
+      console.log(name);
+      document.getElementById("result").innerText = name;
+      //   document.getElementById("result").innerText =
+      //     document.getElementById("Name").value;
+    };
+
+    // input 태그에 글을 쓰고 button을 누르면 그 글내용이 alert
+    const pushText = () => {
+      if (document.getElementById("input2").value) {
+        alert(document.getElementById("input2").value);
+      } else {
+        alert("값을 입력해주세요");
+      }
+      //   alert(document.getElementById("input2").value || "값을 입력해주세요");
+    };
+  </script>
+</html>
+
