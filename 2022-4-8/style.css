@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+  display: flex;
+}
+nav > .tap {
+  width: 25%;
+  padding: 15px 0;
+  background-color: #eeeeee;
+  border: none;
+  cursor: pointer;
+}
+
+nav > .tap:hover {
+  background-color: #adadad;
+}
+.main-page {
+  height: 200px;
+  padding: 50px;
+}
+.main-page > h1 {
+  margin-bottom: 10px;
+}
