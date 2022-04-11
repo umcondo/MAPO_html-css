@@ -24,3 +24,11 @@ nav > .tap:hover {
 .main-page > h1 {
   margin-bottom: 10px;
 }
+
+article > .main-page {
+  height: 100vh;
+}
+
+body {
+  overflow: hidden;
+}
