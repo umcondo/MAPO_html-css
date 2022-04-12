@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p > span {
+        color: red;
+      }
+      div.menu {
+        border: 1px solid #ddd;
+        padding: 2px;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+      div > span {
+        margin: 0 10px;
+      }
+      #adviceText,
+      .orderText {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>어서오세요~</h1>
+    <h2>버거왕 입니다 ^^</h2>
+    <div class="menu">
+      <b>* 버거메뉴 :</b>
+      <span>치즈와퍼</span>
+      <span>불고기와퍼</span>
+      <span>새우버거</span>
+      <span>치킨버거</span>
+      <span>베이컨와퍼</span>
+    </div>
+    <br />
+    <button class="menuAdvice">메뉴 추천해주세요</button>
+    <hr />
+    <p id="adviceText">오늘의 추천 메뉴는 <span>치킨버거</span> 입니다.</p>
+    <input type="text" /> <button class="menuButton">주세요</button>
+    <div class="orderText">
+      <p>음~~ <span class="orderedMenu"></span> 주세요</p>
+      <p>네~ 손님~~ <span class="orderedMenu"></span> 준비해드릴께요 ^^</p>
+    </div>
+    <div class="orderText2"></div>
+    <script src="index.js"></script>
+  </body>
+</html>
