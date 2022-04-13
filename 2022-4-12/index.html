@@ -6,21 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      p > span {
-        color: red;
-      }
       div.menu {
         border: 1px solid #ddd;
         padding: 2px;
         display: inline-block;
         margin-bottom: 20px;
       }
-      div > span {
+      div.menu > span {
         margin: 0 10px;
       }
-      #adviceText,
-      .orderText {
-        display: none;
+      div {
+        margin-bottom: 20px;
       }
     </style>
   </head>
@@ -38,12 +34,9 @@
     <br />
     <button class="menuAdvice">메뉴 추천해주세요</button>
     <hr />
-    <p id="adviceText">오늘의 추천 메뉴는 <span>치킨버거</span> 입니다.</p>
+    <div class="adviceText"></div>
     <input type="text" /> <button class="menuButton">주세요</button>
-    <div class="orderText">
-      <p>음~~ <span class="orderedMenu"></span> 주세요</p>
-      <p>네~ 손님~~ <span class="orderedMenu"></span> 준비해드릴께요 ^^</p>
-    </div>
+    <div class="orderText"></div>
     <div class="orderText2"></div>
     <script src="index.js"></script>
   </body>
