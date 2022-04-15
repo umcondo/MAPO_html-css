@@ -30,8 +30,15 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #3f51b5;
+  transition: 0.5s;
 }
 
+nav ul li a:hover {
+  display: inline-block;
+  text-decoration: underline;
+  color: #fa6806;
+  transform: translate(0, -5px);
+}
 .text-box {
   margin-top: 130px;
   max-width: 600px;
@@ -52,6 +59,15 @@ nav ul li a {
   border-radius: 6px;
 }
 
+.text-box a:hover {
+  font-size: 2em;
+  /* transform: rotate(360); */
+  transition: 1s;
+  background-color: #f7efef;
+  color: #3f51b5;
+  border: 2px solid #3f51b5;
+}
+
 .user-box {
   background: #d9e0ff;
   position: absolute;
@@ -65,4 +81,24 @@ nav ul li a {
   padding-top: 100px;
   width: 410px;
   margin-bottom: -205px;
+}
+
+.bgImg {
+  background-image: url("img/bg_img1.jpg");
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 3em;
+}
+
+.bgImg2 {
+  background-image: url("img/ba_img2.jpg");
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 3em;
 }

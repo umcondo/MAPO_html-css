@@ -41,5 +41,20 @@
         <img src="img/user.png" alt="" />
       </div>
     </div>
+    <div class="bgImg">안녕하세요 ^^</div>
+    <div class="bgImg2">카페 좋아요!!!</div>
+    <script>
+      const my_img = ["cafe_late", "coffee", "life", "rest", "user"];
+
+      function randomImg() {
+        let randomPickImg = my_img[Math.floor(Math.random() * my_img.length)];
+        let img = document.querySelector("div.user-box > img");
+        img.src = "img/" + randomPickImg + ".png";
+      }
+
+      setInterval(randomImg, 2000);
+
+      window.onload = randomImg;
+    </script>
   </body>
 </html>
