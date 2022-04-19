@@ -13,8 +13,14 @@
         color: white;
       }
       body {
+        width: 100%;
         height: 100vh;
         background-image: url("images/image-1.png");
+        background-color: rgba(0, 0, 0, 0.5);
+        background-blend-mode: multiply;
+        background-position: center;
+        background-size: cover;
+        transition: background-image 1s;
       }
       nav {
         display: flex;
@@ -31,7 +37,7 @@
         list-style: none;
         gap: 30px;
       }
-      nav > ul > li > a {
+      nav li a {
         text-decoration: none;
       }
       nav > button {
@@ -46,12 +52,21 @@
         position: absolute;
         bottom: 0;
         display: flex;
+        align-items: center;
         gap: 70px;
         width: 100%;
         padding: 0 150px 70px;
       }
-      article h1 {
+      article > div > h1 {
         font-size: 3em;
+      }
+      article > h1 {
+        font-size: 4em;
+      }
+      article .line {
+        flex-grow: 1;
+        height: 4px;
+        background-color: white;
       }
       article p {
         font-size: 1.2em;
@@ -62,10 +77,10 @@
     <nav>
       <img src="images/logo.png" class="logo" />
       <ul>
-        <li><a href="">Model S</a></li>
-        <li><a href="">Model 3</a></li>
-        <li><a href="">Model X</a></li>
-        <li><a href="">Model Y</a></li>
+        <li><a href="#">Model S</a></li>
+        <li><a href="#">Model 3</a></li>
+        <li><a href="#">Model X</a></li>
+        <li><a href="#">Model Y</a></li>
       </ul>
       <button>Reserve Now</button>
     </nav>
@@ -82,29 +97,43 @@
         <h1>458 mi</h1>
         <p>Max Range</p>
       </div>
-      <div style="width: 40%; position: relative; top: 2em">
-        <hr />
-      </div>
+      <div class="line"></div>
       <h1>Model X</h1>
     </article>
     <script>
       navList = document.querySelectorAll("li > a");
-      console.log(document.querySelector("body").style.backgroundImage);
-      navList.forEach((elm) => {
-        elm.addEventListener("click", () => {
-          if (elm.innerText.includes("S")) {
-            document.querySelector(
-              "body"
-            ).style.backgroundImage = `url('images/image-1.png')`;
-            console.log(document.querySelector("body").style.backgroundImage);
-          } else if (elm.innerText.includes("3")) {
-            document.querySelector(
-              "body"
-            ).style.backgroundImage = `url('images/image-2.png')`;
-            console.log(document.querySelector("body").style.backgroundImage);
+      h1List = document.querySelector("article > h1");
+
+      for (let i = 0; i < navList.length; i++) {
+        navList[i].addEventListener("click", () => {
+          switch (i) {
+            case 0:
+              document.querySelector(
+                "body"
+              ).style.backgroundImage = `url('images/image-1.png')`;
+              h1List.innerText = "Model S";
+              break;
+            case 1:
+              document.querySelector(
+                "body"
+              ).style.backgroundImage = `url('images/image-2.png')`;
+              h1List.innerText = "Model 3";
+              break;
+            case 2:
+              document.querySelector(
+                "body"
+              ).style.backgroundImage = `url('images/image-3.png')`;
+              h1List.innerText = "Model X";
+              break;
+            case 3:
+              document.querySelector(
+                "body"
+              ).style.backgroundImage = `url('images/image-4.png')`;
+              h1List.innerText = "Model Y";
+              break;
           }
         });
-      });
+      }
     </script>
   </body>
 </html>
