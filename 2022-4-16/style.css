@@ -7,6 +7,7 @@
 body {
   margin: 0;
   font-family: "Source Sans Pro";
+  overflow: hidden;
 }
 
 a {
@@ -92,5 +93,94 @@ a {
   .navbar__menu.active,
   .navbar__icons.active {
     display: flex;
+  }
+}
+
+main {
+  height: 100vh;
+  background-color: #f5f5f6;
+  padding: 40px 0;
+  font-size: 20px;
+}
+
+.picture-container {
+  width: 50%;
+  margin: auto;
+  position: relative;
+}
+.picture {
+  position: relative;
+  top: 0;
+  color: white;
+  animation: fadeIn 1.5s;
+}
+.picture img {
+  width: 100%;
+}
+.picture div:nth-child(1) {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.picture div:nth-child(2) {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  font-size: 40px;
+  transform: translateX(-50%);
+}
+.left,
+.right {
+  background: transparent;
+  border: none;
+  padding: 40px 20px;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 1s;
+}
+.left:hover,
+.right:hover {
+  background: rgba(2, 20, 44, 0.4);
+}
+.left {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.right {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn {
+  margin-top: 10px;
+  text-align: center;
+}
+.btn button {
+  padding: 10px;
+  margin: 0 5px;
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  background-color: #9da7b6;
+  cursor: pointer;
+  transition: background-color 1s;
+}
+
+.btn button.active {
+  background-color: #18202b;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
   }
 }
