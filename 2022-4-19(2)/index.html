@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: white;
+      }
+      body {
+        height: 100vh;
+        background-image: url("images/image-1.png");
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        font-weight: bold;
+      }
+      nav > img {
+        height: 100px;
+      }
+      nav > ul {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+      }
+      nav > ul > li > a {
+        text-decoration: none;
+      }
+      nav > button {
+        background: transparent;
+        padding: 13px 30px;
+        border: 2px solid white;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 15px;
+      }
+      article {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        gap: 70px;
+        width: 100%;
+        padding: 0 150px 70px;
+      }
+      article h1 {
+        font-size: 3em;
+      }
+      article p {
+        font-size: 1.2em;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <img src="images/logo.png" class="logo" />
+      <ul>
+        <li><a href="">Model S</a></li>
+        <li><a href="">Model 3</a></li>
+        <li><a href="">Model X</a></li>
+        <li><a href="">Model Y</a></li>
+      </ul>
+      <button>Reserve Now</button>
+    </nav>
+    <article>
+      <div>
+        <h1>1.5 s</h1>
+        <p>60 mph</p>
+      </div>
+      <div>
+        <h1>240 mph</h1>
+        <p>Top Speed</p>
+      </div>
+      <div>
+        <h1>458 mi</h1>
+        <p>Max Range</p>
+      </div>
+      <div style="width: 40%; position: relative; top: 2em">
+        <hr />
+      </div>
+      <h1>Model X</h1>
+    </article>
+    <script>
+      navList = document.querySelectorAll("li > a");
+      console.log(document.querySelector("body").style.backgroundImage);
+      navList.forEach((elm) => {
+        elm.addEventListener("click", () => {
+          if (elm.innerText.includes("S")) {
+            document.querySelector(
+              "body"
+            ).style.backgroundImage = `url('images/image-1.png')`;
+            console.log(document.querySelector("body").style.backgroundImage);
+          } else if (elm.innerText.includes("3")) {
+            document.querySelector(
+              "body"
+            ).style.backgroundImage = `url('images/image-2.png')`;
+            console.log(document.querySelector("body").style.backgroundImage);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
