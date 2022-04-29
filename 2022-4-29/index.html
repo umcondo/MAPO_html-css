@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        border: solid 1px #000;
+        padding: 5px 10px;
+      }
+      th:nth-child(1) {
+        width: 5vw;
+      }
+      th:nth-child(2) {
+        width: 85vw;
+      }
+      th:nth-child(3) {
+        width: 10vw;
+      }
+      tr:nth-child(2n) {
+        background-color: #ececec;
+      }
+    </style>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <h1></h1>
+    <h3></h3>
+    <textarea name="body" id="1" cols="100" rows="10"></textarea>
+    <hr />
+
+    <h1>게시판</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>제목(title)</th>
+          <th>작성자(userId)</th>
+        </tr>
+      </thead>
+      <tbody id="content"></tbody>
+    </table>
+  </body>
+</html>

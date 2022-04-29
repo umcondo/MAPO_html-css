@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        margin: 0;
+      }
+      .checked {
+        color: orange;
+      }
+      i {
+        font-size: 10em;
+      }
+      div {
+        margin-bottom: 10px;
+      }
+      div:nth-child(1) {
+        width: 100%;
+        text-align: center;
+        font-size: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div>
+      <i class="fas fa-star checked"></i>
+      <i class="fas fa-star checked"></i>
+      <i class="fas fa-star checked"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+    </div>
+    <div>
+      <i class="fas fa-star-half"></i>
+      <i class="fas fa-star-half"></i>
+      <i class="fas fa-star-half"></i>
+      <i class="fas fa-star-half"></i>
+      <i class="fas fa-star-half"></i>
+      <i class="fas fa-star-of-life"></i>
+      <i class="fas fa-star-of-life"></i>
+      <i class="fas fa-star-of-life"></i>
+      <i class="fas fa-star-of-life"></i>
+      <i class="fas fa-star-of-life"></i>
+    </div> -->
+
+    <div id="div1" class="fa"></div>
+    <script>
+      function chargebattery() {
+        var a;
+        a = document.getElementById("div1");
+        a.innerHTML = "&#xf244;";
+        setTimeout(function () {
+          a.innerHTML = "&#xf243;";
+        }, 100);
+        setTimeout(function () {
+          a.innerHTML = "&#xf242;";
+        }, 200);
+        setTimeout(function () {
+          a.innerHTML = "&#xf241;";
+        }, 300);
+        setTimeout(function () {
+          a.innerHTML = "&#xf240;";
+        }, 400);
+      }
+      chargebattery();
+      setInterval(chargebattery, 1000);
+    </script>
+  </body>
+</html>
