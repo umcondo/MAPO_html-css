@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container"></div>
+    <div id="container2" style="color: red"></div>
+    <script>
+      let data = {
+        Fish: {
+          trout: {},
+          salmon: {},
+        },
+
+        Tree: {
+          Huge: {
+            sequoia: {},
+            oak: {},
+          },
+          Flowering: {
+            "apple tree": {},
+            magnolia: {},
+          },
+        },
+      };
+      //   container.innerHTML = createTree(container, data);
+
+      function createTreeText(obj) {
+        let li = "";
+        let ul;
+        // console.log(obj);
+        for (let key in obj) {
+          li += "<li>" + key + createTreeText(obj[key]) + "</li>";
+        }
+        if (li) {
+          ul = "<ul>" + li + "</ul>";
+        }
+        // console.log(li);
+        return ul || "";
+      }
+
+      container.innerHTML = createTreeText(data);
+
+      function createTreeDom(obj) {
+        if (!Object.keys(obj).length) return;
+
+        const ul = document.createElement("ul");
+
+        for (let key in obj) {
+          let li = document.createElement("li");
+          li.append(key);
+          li.append(createTreeDom(obj[key]) || "");
+          ul.append(li);
+        }
+
+        return ul;
+      }
+
+      container2.append(createTreeDom(data));
+    </script>
+  </body>
+</html>
