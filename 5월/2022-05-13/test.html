@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Random color example — event handler property</title>
+    <style>
+      button {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button>event 1</button>
+      <button>event 2</button>
+    </div>
+    <script>
+      function event(e) {
+        console.log(e.target.innerText);
+        alert("currentTarget : " + e.currentTarget.innerText);
+        alert("target : " + e.target.innerText);
+      }
+
+      const btn = document.querySelectorAll("button");
+      //   btn.forEach((elm) => elm.addEventListener("click", event));
+      document.querySelector("div").addEventListener("click", event);
+    </script>
+  </body>
+</html>
