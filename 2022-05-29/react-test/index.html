@@ -8,6 +8,7 @@
   </head>
   <body>
     <h1>리액트연습</h1>
+    <div id="module"></div>
     <div id="root"></div>
     <!-- Load react -->
     <script
@@ -59,6 +60,13 @@
       };
       const domContainer = document.getElementById("root");
       ReactDOM.render(React.createElement(App), domContainer);
+    </script>
+    <script type="module">
+      import { Plus } from "./test_module.js";
+      import 이름, { A } from "./react_test.js";
+      document.getElementById("module").textContent = A;
+      // alert(import.meta.url);
+      // alert(이름);
     </script>
   </body>
 </html>
