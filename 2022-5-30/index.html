@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    function ask(question, yes, no) {
+      if (confirm(question)) yes();
+      else no();
+    }
+    function showOk() {
+      alert("동의");
+    }
+    function showCancel() {
+      alert("취소");
+    }
+
+    ask("동의하십니까?", showOk, showCancel);
+  </script>
+</html>
