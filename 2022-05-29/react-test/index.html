@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>리액트</title>
+  </head>
+  <body>
+    <h1>리액트연습</h1>
+    <div id="module"></div>
+    <div id="root"></div>
+    <!-- Load react -->
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <!-- Load Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Your custom script here -->
+    <script type="text/babel">
+      const data = { name: "강대국", hobby: "running" };
+      const App = () => {
+        return (
+          <div>
+            <h1>리액트</h1>
+            <ChildComponent {...data} />
+            <ChildComponent />
+            <ChildComponent2>
+              <h1> zzz</h1>
+            </ChildComponent2>
+          </div>
+        );
+      };
+      // props는 객체형태로 넘겨짐 data="zz"라면 props = {data:'zz'} 같은 식으로
+      const ChildComponent = ({ name, hobby }) => {
+        return (
+          <div className="child">
+            자식, {name}, {hobby}
+          </div>
+        );
+      };
+
+      ChildComponent.defaultProps = {
+        name: "이름없음",
+        hobby: "없다",
+      };
+
+      const ChildComponent2 = ({ children }) => {
+        return (
+          <div>
+            자식2
+            {children}
+          </div>
+        );
+      };
+      const domContainer = document.getElementById("root");
+      ReactDOM.render(React.createElement(App), domContainer);
+    </script>
+    <script type="module">
+      import { Plus } from "./test_module.js";
+      import 이름, { A } from "./react_test.js";
+      document.getElementById("module").textContent = A;
+      // alert(import.meta.url);
+      // alert(이름);
+    </script>
+  </body>
+</html>
