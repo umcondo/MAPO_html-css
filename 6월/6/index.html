@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>event bubbling</title>
+    <style>
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      .a1,
+      .a2,
+      .a3,
+      .a4,
+      .a5 {
+        height: 80%;
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+      }
+      .a1 {
+        background: rgb(245, 213, 213);
+      }
+      .a2 {
+        background: rgb(244, 160, 160);
+      }
+      .a3 {
+        background: rgb(241, 123, 123);
+      }
+      .a4 {
+        background: rgb(240, 59, 59);
+      }
+      .a5 {
+        background: rgb(108, 3, 3);
+      }
+      .red {
+        background: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="a1">
+      첫번째
+      <div class="a2">
+        두번째
+        <div class="a3">
+          세번째
+          <div class="a4">
+            네번째
+            <div class="a5">가장 안쪽 박스</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // 버블링
+    const divisions = document.querySelectorAll("div");
+    divisions.forEach((div) =>
+      div.addEventListener("click", (e) => {
+        console.log("target : ", e.target);
+        console.log("currentTarget : ", e.currentTarget);
+        // e.target.style.backgroundColor = "white";
+        e.target.classList.toggle("red");
+      })
+    );
+
+    // 이벤트 위임
+    // const firstDiv = document.querySelector(".a1");
+    // firstDiv.addEventListener("click", (e) => {
+    //   e.target.style.backgroundColor = "green";
+    //   e.currentTarget.style.backgroundColor = "green";
+    // });
+
+    // 이벤트 전파막기
+    const secondDiv = document.querySelector(".a2");
+    secondDiv.addEventListener("click", (e) => e.stopPropagation());
+  </script>
+</html>
