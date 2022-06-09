@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import styled from "styled-components";
 
 const StyledCompo = styled.div`
@@ -5,6 +6,9 @@ const StyledCompo = styled.div`
   color: ${(props) => (props.active ? "green" : "black")};
 `;
 const User = ({ username, email, id, onRemove, active, onToggle }) => {
+  useEffect(() => {
+    console.log(username);
+  });
   return (
     <>
       <StyledCompo active={active}>

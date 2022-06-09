@@ -5,6 +5,7 @@ import UseState from "./components/UseState";
 import InputSample from "./components/InputSample";
 import UserList from "./components/User";
 import CreateUser from "./components/CreateUser";
+import UseEffect from "./components/UseEffect";
 
 function App() {
   const [users, setUsers] = useState([
@@ -86,6 +87,9 @@ function App() {
         username={username}
         email={email}
       />
+      <hr />
+      <h1>UseEffect연습</h1>
+      <UseEffect />
     </div>
   );
 }
