@@ -6,6 +6,7 @@ import InputSample from "./components/InputSample";
 import UserList from "./components/User";
 import CreateUser from "./components/CreateUser";
 import UseEffect from "./components/UseEffect";
+import useInputs from "./components/UseInputs";
 
 const countActiveUser = (users) => {
   console.log("활성 사용자를 세는중 ...");
@@ -39,7 +40,10 @@ function App() {
     email: "",
   });
 
-  const { username, email } = input;
+  const [{ username, email }, onChange, reset] = useInputs({
+    username: "",
+    email: "",
+  });
 
   const nextId = useRef(4);
 
@@ -52,20 +56,10 @@ function App() {
     // setUsers([...users, user]);
     setUsers((users) => users.concat(user));
 
-    setInput({
-      username: "",
-      email: "",
-    });
-    nextId.current += 1;
-  }, [username, email]);
+    reset();
 
-  const onChange = useCallback((e) => {
-    const { name, value } = e.target;
-    setInput((input) => ({
-      ...input,
-      [name]: value,
-    }));
-  }, []);
+    nextId.current += 1;
+  }, [username, email, reset]);
 
   const onRemove = useCallback((id) => {
     setUsers((users) => users.filter((user) => user.id !== id));
