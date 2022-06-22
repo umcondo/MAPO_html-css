@@ -7,6 +7,7 @@ import UserList from "./components/User";
 import CreateUser from "./components/CreateUser";
 import UseEffect from "./components/UseEffect";
 import useInputs from "./components/UseInputs";
+import DataBinding from "./DataBinding";
 
 const countActiveUser = (users) => {
   console.log("활성 사용자를 세는중 ...");
@@ -74,6 +75,7 @@ function App() {
   }, []);
 
   const count = useMemo(() => countActiveUser(users), [users]);
+
   return (
     <div className="App">
       <UseState />
@@ -93,6 +95,8 @@ function App() {
       <UseEffect />
       <h1>useMemo연습</h1>
       <div>{count}</div>
+      <h1>useRef연습 - 데이터 바인딩</h1>
+      <DataBinding />
     </div>
   );
 }
