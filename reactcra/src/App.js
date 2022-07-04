@@ -8,6 +8,9 @@ import CreateUser from "./components/CreateUser";
 import UseEffect from "./components/UseEffect";
 import useInputs from "./components/UseInputs";
 import DataBinding from "./DataBinding";
+import GetKaKao from "./components/GetKaKao";
+import Swr from "./components/Swr";
+import Swr2 from "./components/Swr2";
 
 const countActiveUser = (users) => {
   console.log("활성 사용자를 세는중 ...");
@@ -97,6 +100,11 @@ function App() {
       <div>{count}</div>
       <h1>useRef연습 - 데이터 바인딩</h1>
       <DataBinding />
+      <hr />
+      <GetKaKao />
+      <hr />
+      <Swr />
+      <Swr2 />
     </div>
   );
 }
