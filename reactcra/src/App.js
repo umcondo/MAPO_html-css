@@ -11,6 +11,7 @@ import DataBinding from "./DataBinding";
 import GetKaKao from "./components/GetKaKao";
 import Swr from "./components/Swr";
 import Swr2 from "./components/Swr2";
+import SwrCounter from "./components/SwrCounter";
 
 const countActiveUser = (users) => {
   console.log("활성 사용자를 세는중 ...");
@@ -105,6 +106,8 @@ function App() {
       <hr />
       <Swr />
       <Swr2 />
+      <hr />
+      <SwrCounter />
     </div>
   );
 }
