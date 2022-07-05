@@ -12,6 +12,7 @@ import GetKaKao from "./components/GetKaKao";
 import Swr from "./components/Swr";
 import Swr2 from "./components/Swr2";
 import SwrCounter from "./components/SwrCounter";
+import Index from "./components/SwrExam";
 
 const countActiveUser = (users) => {
   console.log("활성 사용자를 세는중 ...");
@@ -108,6 +109,7 @@ function App() {
       <Swr2 />
       <hr />
       <SwrCounter />
+      <Index />
     </div>
   );
 }
