@@ -5,27 +5,16 @@ const useCounter = () => {
   const { data, mutate } = useSWR("counter", () => count);
 
   return {
-    data: data || 0,
-    mutate: (inputCount) => {
-      count = inputCount;
+    data,
+    mutate: (num) => {
+      count += num;
       return mutate();
     },
   };
 };
 
 const CounterSwr = () => {
-  const { data, mutate } = useCounter();
-
-  const onIncrease = () => mutate(data + 1);
-  const onDecrease = () => mutate(data - 1);
-
-  return (
-    <div>
-      <h1>count : {data}</h1>
-      <button onClick={onIncrease}>증가</button>
-      <button onClick={onDecrease}>감소</button>
-    </div>
-  );
+  return <div>dds</div>;
 };
 
 export default CounterSwr;

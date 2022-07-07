@@ -1,3 +1,4 @@
+import { useCallback, useEffect } from "react";
 import useSWR from "swr";
 import { useSWRLocalState, useTestSWR } from "../utils/useTestSWR";
 
@@ -11,18 +12,27 @@ const Swr2 = () => {
 
   const { data: inputData, mutate: inputMutate } = useSWRLocalState("");
 
-  const onChange = () => {
-    inputMutate();
-  };
+  useEffect(() => {
+    console.log(inputData);
+  }, [inputData]);
+
+  const onChange = useCallback(
+    (e) => {
+      inputMutate(e.target.value);
+    },
+    [inputMutate]
+  );
+
   const onClick = () => {
     inputMutate("");
   };
+
   return (
     <div>
       <h1>Swr2연습</h1>
       <p>{data}</p>
       <button onClick={onChangeData}>값 변경</button>
-      <input onChange={onChange} value={inputData} />
+      <input onChange={onChange} value={inputData || ""} />
       <button onClick={onClick}>입력</button>
     </div>
   );
