@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      span {
+        color: red;
+      }
+      body {
+        background: #111;
+      }
+      .hidden {
+        opacity: 0;
+      }
+      .console-container {
+        font-size: 3em;
+        text-align: center;
+        height: 200px;
+        width: 600px;
+        display: block;
+        position: absolute;
+        color: #fff;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      .console-underscore {
+        display: inline-block;
+        position: relative;
+        /* top: -0.14em; */
+        left: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="type" style="--n: 20">
+      <span>새로운</span> 마포, 더 <span>좋은</span> 마포<br />
+      마포청년일자리 사업단
+    </h1>
+    <div class="console-container">
+      <span id="text"></span>
+      <div class="console-underscore" id="console">|</div>
+    </div>
+    <script>
+      consoleText(
+        ["새로운", "마포", "더", "좋은", "마포", "마포청년일자리 사업단"],
+        "text",
+        ["tomato"]
+      );
+
+      // 새로운, 좋은 에서 span태그를 만들고 color를 red로 한다.
+      // width를 지정한다.
+
+      function consoleText(words, id, colors) {
+        if (colors === undefined) color = ["#fff"];
+        let visible = true;
+        const con = document.getElementById("console");
+        let letterCount = 1;
+        let x = 1;
+        let waiting = false;
+        const target = document.getElementById(id);
+        target.setAttribute("style", "color:" + colors[0]);
+        window.setInterval(function () {
+          if (letterCount === 0 && waiting === false) {
+            waiting = true;
+            target.innerHTML = words[0].substring(0, letterCount);
+            window.setTimeout(function () {
+              let usedcolor = colors.shift();
+              colors.push(usedcolor);
+              let usedword = words.shift();
+              words.push(usedword);
+              x = 1;
+              target.setAttribute("style", "color: " + colors[0]);
+              letterCount += x;
+              waiting = false;
+            }, 1000);
+          } else if (letterCount === words[0].length + 1 && waiting === false) {
+            waiting = true;
+            window.setTimeout(() => {
+              x = -1;
+              letterCount += x;
+              waiting = false;
+            }, 1000);
+          } else if (waiting === false) {
+            target.innerHTML = words[0].substring(0, letterCount);
+            letterCount += x;
+          }
+        }, 120);
+        window.setInterval(function () {
+          if (visible === true) {
+            con.className = "console-underscore hidden";
+            visible = false;
+          } else {
+            con.className = "console-underscore";
+            visible = true;
+          }
+        }, 400);
+      }
+    </script>
+  </body>
+</html>
