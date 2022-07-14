@@ -1,7 +1,7 @@
 import { useLocalStateSWR } from "./uselocalStateSwr";
 
 const SwrTest = () => {
-  const { data, mutate } = useLocalStateSWR("");
+  const { data, mutate } = useLocalStateSWR("안녕하세요");
   const onChangeData = () => {
     mutate("zzzzz");
   };
