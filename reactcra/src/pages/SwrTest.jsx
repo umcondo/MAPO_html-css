@@ -1,6 +1,6 @@
-import Swr from "./components/Swr";
-import Swr2 from "./components/Swr2";
-import SwrCounter from "./components/SwrCounter";
+import Swr from "../components/Swr";
+import Swr2 from "../components/Swr2";
+import SwrCounter from "../components/SwrCounter";
 
 const SwrTest = () => {
   return (

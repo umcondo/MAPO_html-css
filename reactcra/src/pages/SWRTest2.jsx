@@ -1,5 +1,5 @@
-import CounterSwr from "./components/SWR/CounterSwr";
-import GlobalValueSwr from "./components/SWR/GlobalValueSwr";
+import CounterSwr from "../components/SWR/CounterSwr";
+import GlobalValueSwr from "../components/SWR/GlobalValueSwr";
 
 const SWRTest2 = () => {
   return (

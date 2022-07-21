@@ -1,14 +1,14 @@
 import { useCallback, useMemo, useRef, useState } from "react";
 
 // components
-import UseState from "./components/UseState";
-import InputSample from "./components/InputSample";
-import UserList from "./components/User";
-import CreateUser from "./components/CreateUser";
-import UseEffect from "./components/UseEffect";
-import useInputs from "./components/UseInputs";
-import DataBinding from "./DataBinding";
-import GetKaKao from "./components/GetKaKao";
+import UseState from "../components/UseState";
+import InputSample from "../components/InputSample";
+import UserList from "../components/User";
+import CreateUser from "../components/CreateUser";
+import UseEffect from "../components/UseEffect";
+import useInputs from "../components/UseInputs";
+import DataBinding from "../components/DataBinding";
+import GetKaKao from "../components/GetKaKao";
 
 const countActiveUser = (users) => {
   console.log("활성 사용자를 세는중 ...");

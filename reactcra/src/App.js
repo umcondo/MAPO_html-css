@@ -1,9 +1,10 @@
 // components
 
 import { Route, Routes } from "react-router";
-import App2 from "./App2";
-import SwrTest from "./SwrTest";
-import SWRTest2 from "./SWRTest2";
+import App2 from "./pages/App2";
+import ServerDataAPI from "./pages/ServerDataAPI";
+import SwrTest from "./pages/SwrTest";
+import SWRTest2 from "./pages/SWRTest2";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <Routes>
         <Route path="/state" element={<App2 />} />
         <Route path="/swr" element={<SwrTest />} />
-        <Route path="/" element={<SWRTest2 />} />
+        <Route path="/swr2" element={<SWRTest2 />} />
+        <Route path="/" element={<ServerDataAPI />} />
       </Routes>
     </div>
   );
