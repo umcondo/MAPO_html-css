@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tinyslider 연습</title>
+    <!-- slider library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"></script>
+    <style>
+      * {
+        margin: 0px;
+      }
+      body {
+        color: #fff;
+      }
+      #slider {
+        height: 650px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+      }
+      .container {
+        width: 1600px;
+        margin: auto;
+      }
+      .subcontainer {
+        width: 85%;
+        margin: auto;
+      }
+
+      .controller {
+        display: flex;
+        justify-content: space-between;
+      }
+      .slide-img {
+        width: 100%;
+        height: 275px;
+        border: 1px solid #fff;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+      }
+      .slide-img:hover {
+        box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.9) inset;
+      }
+
+      .img-1 {
+        background-image: url(img/1.jpg);
+      }
+
+      .img-2 {
+        background-image: url(img/2.jpg);
+      }
+
+      .img-3 {
+        background-image: url(img/3.jpg);
+      }
+
+      .img-4 {
+        background-image: url(img/4.jpg);
+      }
+
+      .img-5 {
+        background-image: url(img/5.jpg);
+      }
+      .img-6 {
+        background-image: url(img/5.jpg);
+      }
+      .slide-img a {
+        text-decoration: none;
+        transform: scale(0);
+        transition: 0.8s;
+        font-size: 1.5rem;
+        color: white;
+        opacity: 0;
+      }
+
+      .slide-img:hover a {
+        opacity: 1;
+        transform: scale(1);
+      }
+      @media (max-width: 1600px) {
+        .container {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section id="slider">
+      <div class="container">
+        <div class="subcontainer">
+          <div class="slider-wrapper">
+            <div class="controller">
+              <div>
+                <h2>Top Rated Cities</h2>
+              </div>
+              <div id="controls">
+                <button class="previous"><</button>
+                <button class="next">></button>
+              </div>
+            </div>
+            <br />
+            <div class="my-slider">
+              <div>
+                <div class="slide">
+                  <div class="slide-img img-1">
+                    <a href="#">Learn More</a>
+                  </div>
+                  <br />
+                  <div>
+                    <h3>California</h3>
+                    <p>Los Angeles</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="slide">
+                  <div class="slide-img img-2">
+                    <a href="#">Learn More</a>
+                  </div>
+                  <br />
+                  <div>
+                    <h3>California</h3>
+                    <p>Los Angeles</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="slide">
+                  <div class="slide-img img-3">
+                    <a href="#">Learn More</a>
+                  </div>
+                  <br />
+                  <div>
+                    <h3>California</h3>
+                    <p>Los Angeles</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="slide">
+                  <div class="slide-img img-4">
+                    <a href="#">Learn More</a>
+                  </div>
+                  <br />
+                  <div>
+                    <h3>California</h3>
+                    <p>Los Angeles</p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="slide">
+                  <div class="slide-img img-5">
+                    <a href="#">Learn More</a>
+                  </div>
+                  <br />
+                  <div>
+                    <h3>California</h3>
+                    <p>Los Angeles</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      //   let slider = tns({
+      //     container: ".my-slider",
+      //     slideBy: 1,
+      //     speed: 400,
+      //     nav: false,
+      //     controlsContainer: "#controls",
+      //     prevButton: ".previous",
+      //     nextButton: ".next",
+      //     items: 4,
+      //     responsive: {
+      //       1920: {
+      //         items: 4,
+      //       },
+      //     },
+      //   });
+      //   let slider = tns({
+      //     container: ".my-slider",
+      //     slideBy: 1,
+      //     speed: 400,
+      //   });
+      const slider = tns({
+        container: ".my-slider",
+      });
+    </script>
+  </body>
+</html>

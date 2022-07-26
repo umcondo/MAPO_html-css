@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
+    <style>
+      #slider-section {
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        width: 1920px;
+        margin: auto;
+      }
+
+      .subcontainer {
+        width: 75%;
+        margin: auto;
+        position: relative;
+      }
+
+      .previous,
+      .next {
+        padding: 2px;
+        width: 30px;
+        cursor: pointer;
+        border-radius: 50%;
+        outline: none;
+        transition: 0.7s ease-in-out;
+        border: 3px solid white;
+        background-color: #1a1a1a;
+        box-shadow: 0 0 5px #bbb;
+        position: absolute;
+        top: 50%;
+      }
+
+      .previous {
+        left: -5%;
+      }
+
+      .next {
+        right: -5%;
+      }
+
+      .previous:hover,
+      .next:hover {
+        border: 3px solid gray;
+      }
+
+      #controls i {
+        color: white;
+        font-size: 1rem;
+      }
+
+      /* DYNAMIC HTML */
+
+      .slide {
+        width: auto;
+        height: fit-content;
+      }
+
+      .slide img {
+        width: 100%;
+        height: 250px;
+      }
+
+      @media (max-width: 1920px) {
+        .container {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section id="slider-section">
+      <div class="container">
+        <div class="subcontainer">
+          <div class="slider-wrapper">
+            <br />
+            <div class="slider"></div>
+            <div id="controls">
+              <button class="previous">
+                <i class="fas fa-angle-left"></i>
+              </button>
+              <button class="next"><i class="fas fa-angle-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const slider = document.querySelector(".slider");
+      const pictureObject = [
+        {
+          img: "img/page_07_001.jpg",
+        },
+        {
+          img: "img/page_07_002.jpg",
+        },
+        {
+          img: "img/page_07_003.jpg",
+        },
+        {
+          img: "img/page_07_004.jpg",
+        },
+        {
+          img: "img/page_07_005.jpg",
+        },
+        {
+          img: "img/page_07_006.jpg",
+        },
+        {
+          img: "img/page_07_007.jpg",
+        },
+      ];
+
+      window.addEventListener("load", initializeSlider());
+
+      function initializeSlider() {
+        let pictures = "";
+        for (let picture in pictureObject) {
+          pictures += `<div class="slide">
+                      <img src="${pictureObject[picture].img}"
+                        alt="image">
+                    </div>`;
+        }
+        slider.innerHTML = pictures;
+      }
+
+      const tnslider = tns({
+        container: ".slider",
+        // autoWidth: true,
+        items: 4,
+        gutter: 30,
+        slideBy: 1,
+        nav: false,
+        speed: 400,
+
+        controlsContainer: "#controls",
+        prevButton: ".previous",
+        nextButton: ".next",
+      });
+    </script>
+  </body>
+</html>
