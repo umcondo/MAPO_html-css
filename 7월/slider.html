@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>tinyslider 연습</title>
     <!-- slider library-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"></script>
     <style>
       * {
         margin: 0px;
@@ -176,29 +179,29 @@
       </div>
     </section>
     <script>
-      //   let slider = tns({
-      //     container: ".my-slider",
-      //     slideBy: 1,
-      //     speed: 400,
-      //     nav: false,
-      //     controlsContainer: "#controls",
-      //     prevButton: ".previous",
-      //     nextButton: ".next",
-      //     items: 4,
-      //     responsive: {
-      //       1920: {
-      //         items: 4,
-      //       },
-      //     },
-      //   });
-      //   let slider = tns({
-      //     container: ".my-slider",
-      //     slideBy: 1,
-      //     speed: 400,
-      //   });
-      const slider = tns({
+      let slider = tns({
         container: ".my-slider",
+        slideBy: 1,
+        speed: 400,
+        nav: false,
+        controlsContainer: "#controls",
+        prevButton: ".previous",
+        nextButton: ".next",
+        items: 4,
+        responsive: {
+          1920: {
+            items: 4,
+          },
+        },
       });
+      // let slider = tns({
+      //   container: ".my-slider",
+      //   slideBy: 1,
+      //   speed: 400,
+      // });
+      // const slider = tns({
+      //   container: ".my-slider",
+      // });
     </script>
   </body>
 </html>
