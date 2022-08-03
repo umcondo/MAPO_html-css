@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "MaruBuri";
+  src: url("./MaruBuri.woff2") format("woff2");
+}
+
+.hello {
+  font-family: "MaruBuri";
+  color: red;
+  width: 500px;
+  height: 700px;
+  background-image: url(./img.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
