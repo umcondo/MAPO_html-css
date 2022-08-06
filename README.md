@@ -5,3 +5,5 @@
 ## 2022-6월 ~ : js + react([벨로퍼트](https://react.vlpt.us/), [react 공식문서](https://ko.reactjs.org/)) 공부()
 
 ## 2022-7월 ~ : js - 비동기, closure // webpack
+
+## 2022-8월 ~ : js - zerocho 고급 // webpack 등등
