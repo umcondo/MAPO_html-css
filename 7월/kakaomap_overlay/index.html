@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      .overlay-block {
+        position: relative;
+      }
       .overlay-container {
         border-radius: 30px;
         box-shadow: 0 3px 10px 0 rgb(0 0 0 / 17%);
@@ -62,6 +65,44 @@
         line-height: 1.6rem;
       }
 
+      .overlay-pointer {
+        width: 0;
+        height: 0;
+        border-width: 8px 5px 0;
+        border-style: solid;
+        border-color: #0475f4 transparent transparent;
+        display: inline-block;
+        vertical-align: top;
+        position: absolute;
+        left: 25px;
+        bottom: -7px;
+        margin-top: -2px;
+        z-index: 11;
+      }
+      .overlay-pointer::after {
+        width: 0;
+        height: 0;
+        border-width: 6px 4px 0;
+        border-style: solid;
+        border-color: #fff transparent transparent;
+        position: absolute;
+        top: -8px;
+        left: 50%;
+        z-index: 10;
+        transform: translateX(-50%);
+        content: "";
+      }
+      .overlay-pointer::before {
+        opacity: 0.1;
+        position: absolute;
+        bottom: -2px;
+        left: -5px;
+        width: 10px;
+        height: 3px;
+        background: #000;
+        filter: blur(1px);
+        content: "";
+      }
       .show-kakaomap {
         position: absolute;
         top: 14px;
@@ -92,26 +133,29 @@
   </head>
   <body>
     <h1>오버레이</h1>
-    <div class="overlay-container">
-      <div class="overlay-wrapper">
-        <div class="icon-area">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 26 26"
-            class="icon-place"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M18.46 15.15a6.62 6.62 0 0 0 1.04-3.56A6.55 6.55 0 0 0 13 5a6.55 6.55 0 0 0-6.5 6.59c0 1.24.35 2.46 1.02 3.52l5.14 6.72c.17.23.5.23.68 0l5.12-6.68zM13 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
-            ></path>
-          </svg>
-        </div>
-        <div class="text-area">
-          <div class="maintext-place">
-            <div class="maintext">마포청년일자리사업단</div>
+    <div class="overlay-block">
+      <div class="overlay-container">
+        <div class="overlay-wrapper">
+          <div class="icon-area">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 26 26"
+              class="icon-place"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M18.46 15.15a6.62 6.62 0 0 0 1.04-3.56A6.55 6.55 0 0 0 13 5a6.55 6.55 0 0 0-6.5 6.59c0 1.24.35 2.46 1.02 3.52l5.14 6.72c.17.23.5.23.68 0l5.12-6.68zM13 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
+              ></path>
+            </svg>
+          </div>
+          <div class="text-area">
+            <div class="maintext-place">
+              <div class="maintext">마포청년일자리사업단</div>
+            </div>
           </div>
         </div>
       </div>
+      <div class="overlay-pointer"></div>
     </div>
     <h1>지도클릭버튼</h1>
     <a class="show-kakaomap"

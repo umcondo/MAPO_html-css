@@ -1,0 +1,131 @@
+<html>
+	<head>
+		<title>2022 FE 데브매칭</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<main class="App">
+			<div class="SelectedLanguage">
+				<ul>
+					<li>JavaScript</li>
+					<li>Python</li>
+					<li>Elixir</li>
+					<li>Java</li>
+					<li>PHP</li>
+				</ul>
+			</div>
+			<form class="SearchInput">
+				<input
+					class="SearchInput__input"
+					type="text"
+					placeholder="프로그램 언어를 입력하세요."
+				/>
+			</form>
+		</main>
+		<script>
+			document
+				.querySelector('.SearchInput__input')
+				.addEventListener('keyup', async (e) => {
+					const currentInputLanguage = document.querySelector(
+						'.SearchInput__input'
+					).value;
+
+					// data api
+					let langArrayData = [];
+					if (currentInputLanguage) {
+						langArrayData = await getLanguageData(currentInputLanguage);
+					}
+
+					// 제안 영역만들기
+					const app = document.querySelector('.App');
+					document.querySelector('.Suggestion')?.remove();
+
+					const div = document.createElement('div');
+					div.className = 'Suggestion';
+					app.appendChild(div);
+					const ul = document.createElement('ul');
+					div.appendChild(ul);
+
+					langArrayData.forEach((langData, idx) => {
+						const li = document.createElement('li');
+						li.textContent = langData;
+						ul.appendChild(li);
+					});
+					// document
+					// 	.querySelector('.Suggestion li:first-child')
+					// 	?.classList.add('Suggestion__item--selected');
+
+					// 제안 창 사라지게
+					if (!langArrayData.length) {
+						document.querySelector('.Suggestion').remove();
+					}
+
+					// 엔터키
+					onEnterKey(e, currentInputLanguage);
+					onUpKey(e, currentInputLanguage);
+					onDownKey(e, currentInputLanguage);
+				});
+
+			// enter 키로 인한 폼 제출 막기
+			document
+				.querySelector('.SearchInput')
+				.addEventListener('keydown', (e) => {
+					if (e.keyCode === 13) {
+						e.preventDefault();
+					}
+				});
+
+			function onEnterKey(e, currentLang) {
+				if (e.keyCode === 13) {
+					alert(currentLang);
+				}
+			}
+
+			function onUpKey(e, currentLang) {
+				if (e.keyCode === 38) {
+					let currentIdx = '';
+					const li = document.querySelectorAll('.Suggestion li');
+					li.forEach((elm, idx) => {
+						if (elm?.classList.value === 'Suggestion__item--selected') {
+							currentIdx = idx;
+						}
+						console.log(elm, elm.className);
+					});
+
+					console.log(currentIdx);
+					li.forEach((elm) =>
+						elm.classList.remove('Suggestion__item--selected')
+					);
+					currentIdx = currentIdx - 1;
+
+					if (currentIdx < 0) {
+						currentIdx = li.length - 1;
+						li[currentIdx].className = 'Suggestion__item--selected';
+					} else {
+						li[currentIdx].className = 'Suggestion__item--selected';
+						// li[currentIdx].classList.add('Suggestion__item--selected');
+					}
+					console.log(currentIdx);
+
+					console.log('up');
+				}
+			}
+			function onDownKey(e, currentLang) {
+				if (e.keyCode === 40) {
+					console.log('down');
+				}
+			}
+
+			async function getLanguageData(language) {
+				const response = await fetch(
+					`https://wr4a6p937i.execute-api.ap-northeast-2.amazonaws.com/dev/languages?keyword=${language}`,
+					{
+						method: 'GET',
+					}
+				);
+				const langArrayData = await response.json();
+				return langArrayData;
+			}
+		</script>
+	</body>
+</html>
