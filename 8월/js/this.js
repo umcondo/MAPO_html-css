@@ -61,3 +61,5 @@ const a = {
 console.log(sum(...list));
 console.log(sum.call(a, ...list));
 console.log(sum.apply(a, list));
+
+// const arrow = () => { return const x = 1};
